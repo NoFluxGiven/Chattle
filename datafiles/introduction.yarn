@@ -1,0 +1,186 @@
+title: Start
+tags: foo, bar
+---
+
+Next, please.
+<<jump Explanation1>>
+<<pause(0.8)>>
+Ah. A [c_red]~Cursed~[/c].
+Your name is...
+<<pause(0.8)>>
+<<express("questionMark")>>
+<<pause(0.8)>>
+No name to write here?
+<<pause(0.8)>>
+... and no [c_orange]~Wisdom~[/c] to speak of, that's normal.
+<<pause(0.8)>>
+Curious. Most creatures like [c_red]you[/c] possess a name.
+Perhaps you lost it, down in the [c_gray]~Nihil~[/c]?
+-> Yes
+    Good. At least you know where to retrieve it from.
+-> No
+    Hmmm...
+    Do you know what you are?
+    -> Yes
+        Good. You possess more knowledge than your forebears.
+        
+    -> No
+        You are a [c_red]~Cursed~[/c].
+        A creature, born of the [c_gray]~Nihil~[/c] below.
+        <<learn("Cursed")>>
+        My voice reaches far. When you are unsure of something someone says, focus upon the words.
+        Provided I have given you my guidance, you will gain the knowledge once more.
+        Do you have any questions?
+        -> Nihil
+            The [c_gray]~Nihil~[/c] is the nothingness beneath us. Roots of silence reaching far.
+            <<learn("Nihil")>>
+        -> Voice
+            I am a [c_lime]Clerk[/c]. An attendant of the [c_lime]Lobbies[/c] - liminal places of rest and recuperation.
+            <<learn("Clerk")>>
+            <<learn("Lobby")>>
+        -> Where
+            You are in the [c_aqua]Structure[/c]. It is... a place of ascension. Of second chances.
+            <<learn("Structure")>>
+-> I don't know
+    Hmmm...
+    Memories are highly fallible. I would assume it rests somewhere down there.
+Now, I must introduce myself.
+I am the [c_orange]~Clerk~[/c].
+You stand in the [c_aqua]~Lobby~[/c], a place where turbulent souls rest before their next expedition.
+Since this appears to be your first time, I will explain how this structure functions.
+-> Yes
+    Excellent.
+    <<jump "Explanation1">>
+-> No
+    I...
+    Are you sure?
+    I have important information to impart.
+    -> Yes
+        You *are* sure? Or you want me to continue?
+        -> Yes
+            You do realise that that isn't a yes or no question, right?
+            -> Yes
+                Well... good.
+                For your sake, I shall continue.
+                <<jump "Explanation1">>
+            -> No
+                You...
+                <<pause(0.4)>>
+                ... I will need to explain to you how questions function as well, then?
+                -> Yes
+                    I see...
+                    // Question bit here
+                    Well...
+                    They're kind of... things you say when you want to know something.
+                    <<learn("questions", "Things you say when you want to know something.")>>
+                -> No
+                    Then what do you want?
+                    -> Yes
+                        ...
+                        -> Yes
+                            ...
+                            -> Yes
+                                ...
+                                -> Yes
+                                    ... We're done here.
+        -> No
+            As in... you're not sure, or you don't want me to continue?
+            -> Yes
+                ... That's not how this works.
+                -> Yes
+                    Finally. We are in agreement.
+                    I will take our serendipitous synchronisation to mean you would like me to explain.
+                    <<hop("Explanation1")>>
+                -> No
+                    ... Please... just answer my question.
+                    -> Yes
+                        Yes... and?
+                        -> Yes
+                            ... I'm... I'm not sure you understand how conversations work.
+                            -> Yes
+                                ... Well, at least we agree on something...
+                                -> Yes
+                                    ...
+                                    -> Yes
+                                        ...
+                                        -> Yes
+                                            ...
+                                            We're done here.
+                                
+            -> No
+                You're not sure, AND you don't want me to continue?
+                -> Yes
+                    Got it.
+                    While I believe what I must impart is important...
+                    The [c_lime]~Lantern~[/c] is to your left. The flame is lit.
+                    ~Ascend~ away.
+                -> No
+                    ...
+                    <<hop "Explanation1">>
+
+    -> No
+        You aren't sure?
+            -> Yes
+                Well, my information would assist you, then.
+                Let us begin.
+                <<hop "Explanation1">>
+            -> No
+                So you're sure. I see.
+                I must say, what I have to say will assist you greatly.
+                -> Yes
+                    I am glad.
+                    <<hop "Explanation1">>
+                -> No
+                    Well, I shan't force you.
+                    The [c_lime]Lantern[/c] is to your left. The flame is lit.
+                    Ascend away.
+
+===
+
+title: Explanation1
+tags: rules
+---
+<<learn("Cursed")>>
+<<learn("Chosen")>>
+<<learn("Clerk", "A mysterious tall creature that seems to always be in attendance of a [c_lime]Lobby[/c].")>>
+As a [c_orange]~Clerk~[/c], I can impart knowledge through my very thoughts.
+Focus on the words that you have ~questions~ about, and they will reveal to you their secrets.
+<<learn("Lobby", "A liminal place of rest and recuperation, headed by the [c_orange]Clerk[/c].")>>
+Here you stand in a [c_green]~Lobby~[/c].
+<<learn("Wills", "Godlike beings with the ability to shape the world, and enforcers of the ancient laws.")>>
+<<learn("Ascension", "Reach the top of the Structure, and be reborn.")>>
+This structure is formed of the [c_aqua]~Wills~[/c], beings of immense power. They are the enforcers of the ancient laws of [c_lime]~Ascension~[/c].
+To ascend, a [c_red]~Cursed~[/c] need only touch the [c_lime]Lantern[/c] on that floor.
+[c_aqua]~Chosen~[/c], on the other hand, ascend by felling your kind.
+Sometimes, violence is the only defense.
+<<learn("Gambits", "Distilled embodiments of actions, placed on the field.")>>
+Use [c_orange]~Gambits~[/c] to evade or dispatch your foes.
+<<learn("placed", "Gambits can be placed on tiles, and activate their effects when moved over.")>>
+<<learn("strategically", "When activated, most Gambits use your forward direction as a part of their effect.")>>
+They can be [c_orange]~placed~[/c] on the field. Make sure you think [c_orange]~strategically~[/c].
+<<unlearn("placed;strategically")>>
+<<learn("Kether", "The topmost floor, where even [shake]I[/shake] cannot go. A place of rebirth.")>>
+The structure has multiple floors. At the very top is [c_gold]~Kether~[/c].
+My time in this place, so long it has been, has made me weary.
+I... have devised ways to make things more interesting.
+[c_red]~Cursed~[/c] are never able to ascend more than a floor or two before falling to their foes.
+<<pause(0.4)>>
+But...
+<<pause(0.4)>>
+<<learn("terrible", "[pulse]?[/pulse]")>>
+With the power of foresight, one can do many great, and ~terrible~, things.
+It is why, for you, I will make an offer.
+Imagine that [c_red]death[/c] is not the end. That through it, you can still succeed.
+All you need to do...
+<<learn("Promise", "[shake][c_yellow]Promise[/c][/shake]")>>
+Is make me a [speed,0.1][c_yellow]~Promise~[/c][/speed].
+Just for your first time, I offer this with [c_orange]no conditions attached[/c].
+Should you perish, you will appear back when you last made a [c_yellow]~Promise~[/c].
+<<learn("Do you accept?", "[wave][c_yellow]PROMISE[/c][/wave]\n\n[c_red]CONDITIONS[/c]\n[c_gray]> No conditions.[/c]")>>
+[c_yellow]~Do you accept?~[/c]
+-> [shake]Accept.[/shake] #PromiseYes
+    Excellent!
+    You will find [c_red]death[/c] shall not come to you so easily with this on your side.
+-> [shake]Decline.[/shake] #PromiseNo
+    Oh. Okay.
+===
