@@ -1,0 +1,40 @@
+title: Start
+tags: 
+---
+
+[shake]Uhh[/shake]...
+You're... you're a [c_red]Cursed[/c], aren't you?
+Yeah. You are.
+Don't worry! I'm a [c_blue]Chosen[/c], but I'm not going to try and... well, you know.
+This place is peaceful. Mostly. See?
+<<express("pointEast")>>
+<<pause(0.6)>>
+We have buildings, and merchants, and all sorts!
+We're all trying to get by without the need to [c_aqua]Ascend[/c]. We've built all this away from that accursed [c_lime]Lantern[/c].
+<<jump "Questions">>
+===
+title: Questions
+tags:
+---
+You need anything?
+-> Lantern
+    It's north, from here. Past the gates. [c_red]Cursed[/c] like you can use it, but I'd be careful...
+    There's a good- [delay,500]no, a [shake]very[/shake] good[delay,500] -chance that some of the [c_blue]Chosen[/c] that wish to [c_aqua]Ascend[/c] have set up a trap.
+-> Where
+    We call this place the [c_lime]City Between[/c]. It's a nice place.
+    Stay as long as you like! There are people willing to trade goods for [c_orange]Wisdom[/c], and plenty to talk with, if you're into that.
+-> Who
+    I'm Ret. Guardian of the Entry Gate!
+    To be honest, I mostly just talk to people, rather than, you know... guard it.
+    Still, it's a good job. Pays... well, nothing.
+    Not that I need [c_orange]Wisdom[/c].
+-> No more questions
+    <<jump "End">>
+<<jump "Questions">>
+===
+
+title: End
+tags:
+---
+
+Right. Allons-y!

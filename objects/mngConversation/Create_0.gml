@@ -213,7 +213,7 @@ state.add_child( "base", "chat", {
 		}
 
 		try {
-			region = element.region_detect( textx, texty, mousecentrebox_x, mousecentrebox_y );
+			region = element.region_detect( textx, texty, mouse_x, mouse_y);
 			tooltip = getTooltip( region );
 		} catch(err) {
 			show_debug_message( err );
@@ -310,7 +310,7 @@ state.add_child( "base", "chat", {
 						array_map(
 							other.options,
 							function( centrebox_x, _i ) {
-								return index == _i ? $"[ccentrebox_yellow]{centrebox_x.text}[/c]" : centrebox_x.text
+								return index == _i ? $"[c_yellow]{centrebox_x.text}[/c]" : centrebox_x.text
 							}
 						)
 					)
